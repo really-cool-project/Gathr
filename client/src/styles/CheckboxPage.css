@@ -1,8 +1,10 @@
+
 .hosting-standards {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -40%);
+    font-weight: 200;
 }
 p:first-child {
     font-size: 50px;
