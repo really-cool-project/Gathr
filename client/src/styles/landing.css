@@ -1,0 +1,16 @@
+.gallery-wrapper {
+    width:  100%;
+    margin: auto;
+    padding-top: 5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.supper-wrapper {
+    display: inline-block;
+    width: 30rem;
+    height: 20rem;
+    margin: 1rem 1rem 1rem 1rem;
+    background-image: url("http://blog.elfster.com/wp-content/uploads/2017/04/brooke-lark-200721.jpg");
+    background-size: cover;
+}

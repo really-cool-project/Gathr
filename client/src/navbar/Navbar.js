@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import CheckboxContainer from '../checkbox/CheckboxContainer.js'
+import ListContainer from "../landing/ListContainer.js";
 import { Link, Switch, Route } from 'react-router-dom';
 
 class Navbar extends Component {
     render() {
+        console.log(this.props)
         return (
             <div className = "navbar">
-                <a href="" className = "logo">Logo</a>
+                <Link to="/"><a href="" className = "logo">Logo</a></Link>
                 <ul className = "navbar-link-container">
                     <li><Link to = "/host"><a href="">Host a Supper</a></Link></li>
                     <li className = "sign-up"><a href="">Sign Up</a></li>
@@ -22,6 +24,7 @@ class Navbar extends Component {
                     </li>
                 </ul>
                 <Switch>
+                    <Route exact path = "/" component = {ListContainer}></Route>
                     <Route path = "/host" component = {CheckboxContainer}></Route>
                 </Switch>
             </div>
