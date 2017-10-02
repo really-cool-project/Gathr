@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router } from "react-router-dom";
 import ReactDOM from 'react-dom';
 import NavbarContainer from './navbar/NavbarContainer.js';
 import CheckboxContainer from './checkbox/CheckboxContainer.js';
@@ -22,6 +23,6 @@ class App extends Component {
 export default App;
 
 ReactDOM.render( 
-    <App />,
+    <Router><App /></Router>,
     document.getElementById('root')
 )
