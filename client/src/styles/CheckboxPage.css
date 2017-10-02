@@ -1,0 +1,44 @@
+.hosting-standards {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+p:first-child {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+p:nth-child(2) {
+    font-size: 25px;
+}
+
+.checkbox, .checkbox-label {
+    margin-top: 60px;
+}
+
+.checkbox-label {
+    margin-left: 13px;
+}
+
+.checkbox-btn {
+    display: block;
+    font-size: 20px;
+    width: 140px;
+    height: 50px;
+    background-color: transparent;
+    color: #494949;
+    border: 2px solid #19c589;
+    border-radius: 10px;
+    box-shadow: none;
+    position: relative;
+    top: 75%;
+    transform: translateY(75%)
+}
+
+.checkbox-btn:hover {
+    cursor: pointer;
+    background-color: #19c589;
+    color: white;
+    
+}
