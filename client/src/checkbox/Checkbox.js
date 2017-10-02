@@ -10,10 +10,10 @@ class CheckboxPage extends Component {
                     <p>Welcome guest!</p>
                     <p>To become a host, you must be able to hold our supper club standards. Your food must be a product of experience, deep knowledge and passion, and your space must also reflect those values.</p>
                     <input className ="checkbox" type="checkbox"/><label className = "checkbox-label">I agree</label>
-                    <Link to="/apply"><button className = "checkbox-btn">Continue</button></Link>
+                    <button className = "checkbox-btn"><Link to = "/host/apply">Continue</Link></button>
                 </div>
                 <Switch>
-                    <Route path = "/apply" component = {ApplyContainer}></Route>
+                    <Route path = "/host/apply" component = {ApplyContainer}></Route>
                 </Switch>
             </div>
         );
