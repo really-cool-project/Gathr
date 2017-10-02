@@ -4,7 +4,7 @@ import Navbar from './Navbar.js';
 class NavbarContainer extends Component {
     render() {
         return (
-            <Navbar />
+            <Navbar supperList = {this.props.supperList}/>
         );
     }
 }
