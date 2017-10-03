@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
 import NavbarContainer from './navbar/NavbarContainer.js';
 import ListContainer from "./landing/ListContainer.js";
+import Modal from './modal/modal-component.js';
+import './styles/modal.css';
 import "./styles/landing.css";
 import './styles/Navbar.css';
 import './styles/CheckboxPage.css';
@@ -20,8 +22,8 @@ class App extends Component {
     render() {
         return (
             <div>
-                <NavbarContainer 
-                    supperList = {this.state.supperList}/>
+                <NavbarContainer />
+                <Modal />
             </div>
         );
     }

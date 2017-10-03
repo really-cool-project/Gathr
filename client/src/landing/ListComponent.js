@@ -15,20 +15,6 @@ class ListComponent extends Component {
         return (
             <div className="gallery-wrapper">
                 <SupperContainer />
-                <SupperContainer />
-                <SupperContainer />
-                <SupperContainer />
-                <SupperContainer />
-                <SupperContainer />
-                <SupperContainer />
-                <SupperContainer />
-                <SupperContainer />
-                <SupperContainer />
-                <SupperContainer />
-                <SupperContainer />
-                <SupperContainer />
-                <SupperContainer />
-                <SupperContainer />
                 {/* {this.genSuppers()}; */}
             </div>
         );
