@@ -28,7 +28,7 @@ class App extends Component {
         return (
             <div>
                 <NavbarContainer />
-                <SignUpContainer />
+                
             </div>
         );
     }
