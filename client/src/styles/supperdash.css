@@ -1,0 +1,63 @@
+.dashboard-wrapper {
+    margin: 0; 
+    padding: 0;
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    top: 20%;
+    left: 37.5%;
+    transform: translateX(-37.5%);
+}
+
+.welcome-line {
+    text-align: center;
+    vertical-align: center;
+    margin: auto;
+}
+
+p {
+    
+}
+
+.supper-btn {
+    font-size: 20px;
+    width: 140px;
+    height: 50px;
+    background-color: transparent;
+    color: #494949;
+    border: 2px solid #008489;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.supper-btn:hover {
+    cursor: pointer;
+    background-color: #008489;
+    color: white;
+    
+}
+
+.my-supper {
+    display: inline-block;
+    height: 250px;
+    width: 300px;
+    border: 2px solid  #008489;
+}
+
+.edit-my-supper {
+    display: inline-block;
+    font-size: 20px;
+    width: 140px;
+    height: 50px;
+    background-color: transparent;
+    color: #494949;
+    border: 2px solid #008489;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.edit-my-supper:hover {
+    cursor: pointer;
+    background-color: #008489;
+    color: white;
+}
