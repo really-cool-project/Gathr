@@ -1,0 +1,71 @@
+.dashboard-wrapper {
+    margin: 0; 
+    padding: 0;
+    position: absolute;
+    width: 75%;
+    top: 20%;
+    left: 37.5%;
+    transform: translateX(-37.5%);
+}
+
+.welcome-line {
+    text-align: center;
+    vertical-align: center;
+    margin: auto;
+}
+
+p {
+    
+}
+
+.supper-btn {
+    font-size: 20px;
+    width: 140px;
+    height: 50px;
+    background-color: transparent;
+    color: #494949;
+    border: 2px solid #008489;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.supper-btn:hover {
+    cursor: pointer;
+    background-color: #008489;
+    color: white;
+    
+}
+
+.my-supper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    border-radius: 50%;
+    display: inline-block;
+    height: 500px;
+    width: 500px;
+    padding: 100px;
+    text-align: center;
+    border: 2px solid  #008489;
+    margin-bottom: 100px;
+}
+
+.edit-my-supper {
+    display: inline-block;
+    font-size: 20px;
+    width: 140px;
+    height: 50px;
+    background-color: transparent;
+    color: #494949;
+    border: 2px solid #008489;
+    border-radius: 10px;
+    box-shadow: none;
+    margin: 100px 0
+}
+
+.edit-my-supper:hover {
+    cursor: pointer;
+    background-color: #008489;
+    color: white;
+}
