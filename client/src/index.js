@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
 import NavbarContainer from './navbar/NavbarContainer.js';
 import ListContainer from "./landing/ListContainer.js";
-import Modal from './modal/modal-component.js';
-import SupperDashboardContainer from './supper-dashboard'
+import SupperDashboardContainer from './supper-dashboard/SupperDashboardContainer.js';
 import './styles/modal.css';
 import "./styles/landing.css";
 import './styles/Navbar.css';
@@ -12,6 +11,7 @@ import './styles/CheckboxPage.css';
 import './styles/typography.css';
 import "./styles/apply.css";
 import './styles/CreatePage.css';
+import './styles/supperdash.css';
 
 class App extends Component {
     constructor() {
