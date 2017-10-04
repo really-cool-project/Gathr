@@ -4,6 +4,8 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import NavbarContainer from './navbar/NavbarContainer.js';
 import ListContainer from "./landing/ListContainer.js";
 import SupperDashboardContainer from './supper-dashboard/SupperDashboardContainer.js';
+import LoginContainer from './login/LoginContainer.js';
+import SignUpContainer from './signup/SignUpContainer.js'
 import './styles/modal.css';
 import "./styles/landing.css";
 import './styles/Navbar.css';
@@ -12,6 +14,8 @@ import './styles/typography.css';
 import "./styles/apply.css";
 import './styles/CreatePage.css';
 import './styles/supperdash.css';
+import './styles/login.css';
+import './styles/signup.css';
 
 class App extends Component {
     constructor() {
@@ -24,7 +28,7 @@ class App extends Component {
         return (
             <div>
                 <NavbarContainer />
-                <SupperDashboardContainer />
+                <SignUpContainer />
             </div>
         );
     }
