@@ -28,14 +28,20 @@ p:nth-child(2) {
     font-size: 20px;
     width: 140px;
     height: 50px;
-    background-color: transparent;
-    color: #494949;
-    border: 2px solid #19c589;
+    background-color: #008489 !important;
+    color: white;
+    border: none;
     border-radius: 10px;
     box-shadow: none;
     position: relative;
     top: 75%;
-    transform: translateY(75%)
+    transform: translateY(75%);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-link {
+    text-decoration: none !important;
 }
 
 .checkbox-btn:hover {

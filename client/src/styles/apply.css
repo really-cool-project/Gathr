@@ -1,5 +1,5 @@
 .applyComponent {
-    margin-top: 35em;
+    margin-top: 14em;
     margin-left: 25vw;
     margin-bottom: 10em;
     max-width: 50vw;
@@ -10,7 +10,6 @@
 }
 
 .applyTitle {
-    margin-top: 4.0em;
     margin-bottom: 0;
     font-size: 3rem;
 }
@@ -20,9 +19,12 @@
     font-weight: none;
 }
 
-.applySubmit {
-    display: block;
-    margin-top: 1rem;
+.applySubmit:hover {
+    border-bottom: 1px solid #008489 !important;
+}
+
+.applySubmit:focus {
+    outline: 0;
 }
 
 .applyTextarea::placeholder {
@@ -48,10 +50,13 @@
 }
 
 .applySubmit {
-    font-size: 1em;
+    font-size: 20px;
     color: #484848 !important;
     background-color: transparent;
     border: none;
-    margin-top: 2em;
-    margin-left: 33.7em;
+    margin-top: 3em;
+    margin-right: 1em;
+    padding-bottom: .25em;
+    float: right;
+    cursor: pointer;
 }

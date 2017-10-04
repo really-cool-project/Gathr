@@ -11,7 +11,7 @@ class Navbar extends Component {
             <div className = "navbar">
                 <Link to="/"><a href="" className = "logo">Logo</a></Link>
                 <ul className = "navbar-link-container">
-                    <li><Link to = "/host"><a href="">Host a Supper</a></Link></li>
+                    <li className = "host"><Link to = "/host"><a href="">Host a Supper</a></Link></li>
                     <li className = "sign-up"><a href="">Sign Up</a></li>
                     <li className = "login"><a href="">Log In</a></li>
                     <li>
@@ -25,10 +25,7 @@ class Navbar extends Component {
                     </li>
                 </ul>
             </div>
-            <Switch>
-                    <Route exact path = "/" component = {ListContainer}></Route>
-                    <Route path = "/host" component = {CheckboxContainer}></Route>
-            </Switch>
+            
             </div>
         );
     }
