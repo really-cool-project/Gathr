@@ -7,6 +7,7 @@ class Navbar extends Component {
     render() {
         console.log(this.props)
         return (
+            <div>
             <div className = "navbar">
                 <Link to="/"><a href="" className = "logo">Logo</a></Link>
                 <ul className = "navbar-link-container">
@@ -23,10 +24,11 @@ class Navbar extends Component {
                         </ul>
                     </li>
                 </ul>
-                <Switch>
+            </div>
+            <Switch>
                     <Route exact path = "/" component = {ListContainer}></Route>
                     <Route path = "/host" component = {CheckboxContainer}></Route>
-                </Switch>
+            </Switch>
             </div>
         );
     }

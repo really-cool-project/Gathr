@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
 import NavbarContainer from './navbar/NavbarContainer.js';
-import ListContainer from "./landing/ListContainer.js";
-import Modal from './modal/modal-component.js';
+//import Modal from './modal/modal-component.js';
+
 import './styles/modal.css';
 import "./styles/landing.css";
 import './styles/Navbar.css';
@@ -23,7 +23,7 @@ class App extends Component {
         return (
             <div>
                 <NavbarContainer />
-                <Modal />
+                {/* <Modal /> */}
             </div>
         );
     }
