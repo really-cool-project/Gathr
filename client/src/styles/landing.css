@@ -1,16 +1,36 @@
+
 .gallery-wrapper {
-    width:  100%;
-    margin: auto;
-    padding-top: 7rem;
-    align-items: center;
-    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75%;
+    width: 75%;
+   
 }
 
 .supper-wrapper {
-    display: none;
-    width: 30rem;
-    height: 20rem;
-    margin: 1rem 1rem 1rem 1rem;
-    background-image: url("http://blog.elfster.com/wp-content/uploads/2017/04/brooke-lark-200721.jpg");
+    display: inline-block;
+    height: 300px;
+    width: 300px;
     background-size: cover;
+}
+
+.supper-content {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition-property: opacity, background;
+    transition-duration: .7s, .7s;
+  }
+
+
+.supper-content:hover {
+    background-color: black;
+    opacity: 1;
+    color: white;
+}
+
+.supper-wrapper p {
+    color: white;
 }

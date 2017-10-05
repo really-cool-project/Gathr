@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import ListComponent from "./ListComponent.js";
 
+import { connect } from 'react-redux';
+import { loadPublicSuppers } from '../redux/actions/index.js'
+
 class ListContainer extends Component {
+    componentDidMount = () => {
+        this.props.loadPublicSuppers();
+    }
     render() {
-        console.log(this.props)
         return (
-                <ListComponent supperList={this.props.supperList}/>
+                <ListComponent suppers = {this.props.suppers}/>
         );
     }
 }
+const mapStateToProps = (state) => {
+    return state
+}
 
-export default ListContainer;
+export default connect (mapStateToProps, {loadPublicSuppers}) (ListContainer);

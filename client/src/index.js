@@ -11,6 +11,10 @@ import SupperDashboardContainer from './supper-dashboard/SupperDashboardContaine
 import LoginContainer from './login/LoginContainer.js';
 import SignUpContainer from './signup/SignUpContainer.js'
 import Thank from "./thank/Thank.js";
+import thunk from 'redux-thunk';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import mainReducer from './redux/reducers/index.js';
 import "./styles/thank.css";
 import './styles/modal.css';
 import "./styles/landing.css";
@@ -23,6 +27,8 @@ import './styles/supperdash.css';
 import './styles/login.css';
 import './styles/signup.css';
 import "./styles/supper.css";
+
+let store = createStore(mainReducer, applyMiddleware(thunk))
 
 class App extends Component {
     constructor() {
@@ -51,6 +57,6 @@ class App extends Component {
 export default App;
 
 ReactDOM.render( 
-   <Router><App /></Router>,
+   <Provider store = {store}><Router><App /></Router></Provider>,
     document.getElementById('root')
 )
