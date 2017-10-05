@@ -42,7 +42,7 @@ class LoginContainer extends Component {
     render() {
         return (
             this.props.isAuthenticated ?
-            <Redirect to="/profile" /> :
+            <Redirect to="/dashboard" /> :
             <Login 
                 handleChange = {this.handleChange}
                 handleSubmit = {this.handleSubmit}
