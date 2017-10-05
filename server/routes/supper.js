@@ -16,7 +16,7 @@ supperRoute.route("/")
             if (err) {
                 res.status(500).send(err);
             } else {
-                res.status(200).send(dolphins);
+                res.status(200).send(suppers);
             }
         });
     })

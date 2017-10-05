@@ -4,7 +4,9 @@ import ItemComponent from "./ItemComponent.js";
 class ItemContainer extends Component {
     render() {
         return (
-            <ItemComponent />
+            <ItemComponent 
+            {...this.props}
+            />
         );
     }
 }
