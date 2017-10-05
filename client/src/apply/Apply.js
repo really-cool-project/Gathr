@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
 class Apply extends Component {
     render() {
@@ -10,7 +11,7 @@ class Apply extends Component {
                 </div>
                 <div className="applyBody">
                     <textarea className="applyTextarea" placeholder="Tell us how your supper will be unique" rows="12" cols="95"/>
-                    <button className="applySubmit">Pitch my supper!</button>
+                    <Link to="/host/apply/thank"><button className="applySubmit">Pitch my supper!</button></Link>
                 </div>
             </div>
         );

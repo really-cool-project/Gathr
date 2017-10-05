@@ -10,6 +10,8 @@ import NavbarContainer from './navbar/NavbarContainer.js';
 import SupperDashboardContainer from './supper-dashboard/SupperDashboardContainer.js';
 import LoginContainer from './login/LoginContainer.js';
 import SignUpContainer from './signup/SignUpContainer.js'
+import Thank from "./thank/Thank.js";
+import "./styles/thank.css";
 import './styles/modal.css';
 import "./styles/landing.css";
 import './styles/Navbar.css';
@@ -37,7 +39,8 @@ class App extends Component {
                     <Route exact path = "/" component = {ListContainer}></Route>
                     <Route exact path = "/host" component = {CheckboxContainer}></Route>
                     <Route path = "/supper" component = {SupperContainer}></Route>
-                    <Route path = "/host/apply" component = {ApplyContainer}></Route>
+                    <Route exact path = "/host/apply" component = {ApplyContainer}></Route>
+                    <Route path = "/host/apply/thank" component = {Thank}></Route>
                 </Switch>
     
             </div>
