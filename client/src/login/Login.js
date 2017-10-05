@@ -5,7 +5,7 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <form className="login-wrapper">
+                <form onSubmit={this.props.handleSubmit} className="login-wrapper">
                     <p>Welcome.</p>
                     <input 
                         className = "login-inputs" 

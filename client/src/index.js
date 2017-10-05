@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
-import { Link, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import SupperContainer from "./supper/SupperContainer.js";
 import ApplyContainer from "./apply/ApplyContainer.js";
@@ -32,6 +32,7 @@ import "./styles/supper.css";
 
 let store = createStore(mainReducer, applyMiddleware(thunk))
 
+
 class App extends Component {
     constructor() {
         super();
@@ -58,6 +59,10 @@ class App extends Component {
         );
     }
 }
+
+store.subscribe(() => {
+    console.log(store.getState());
+})
 
 export default App;
 

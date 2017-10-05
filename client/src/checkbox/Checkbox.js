@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Switch, Route } from 'react-router-dom';
-import ApplyContainer from "../apply/ApplyContainer.js";
+import { Link } from 'react-router-dom';
 
 class CheckboxPage extends Component {
     render() {

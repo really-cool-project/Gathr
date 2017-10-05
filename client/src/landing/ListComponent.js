@@ -11,7 +11,6 @@ class ListComponent extends Component {
         })
     }
     render() {
-        console.log(this.props)
         return (
             <div className = "gallery-wrapper">
                {this.genSuppers()};

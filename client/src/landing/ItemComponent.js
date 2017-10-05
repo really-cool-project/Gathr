@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 class ItemComponent extends Component {
     render() {
-        console.log(this.props)
         return (
             <div className="supper-wrapper" style={{ backgroundImage: `url(${this.props.photo})` }}>
                 <div className="supper-content" >

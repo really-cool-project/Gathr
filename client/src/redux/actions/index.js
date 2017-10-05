@@ -13,7 +13,7 @@ const profileUrl = "http://localhost:8080/profile/"
 const publicUrl = "http://localhost:8080/public/"
 
 
-export let verifyToken = () => {
+export function verifyToken () {
     return (dispatch) => {
         axios.get(profileUrl + "verify")
             .then((response) => {
@@ -29,7 +29,7 @@ export let verifyToken = () => {
 }
 
 
-export let authenticate = (isValid, user) => {
+export function authenticate(isValid, user) {
     return {
         type: "AUTHENTICATE",
         isValid,
@@ -37,7 +37,7 @@ export let authenticate = (isValid, user) => {
     }
 }
 
-export let authError = (err) => {
+export function authError (err) {
     return {
         type: "AUTH_ERROR",
         err
@@ -79,10 +79,12 @@ export function login(credentials) {
     }
 }
 
-export let logout = () => {
+export function logout() {
     return(dispatch)=>{
+        console.log("logged out");
         localStorage.removeItem("token");
         dispatch({type: "LOGOUT"});
+        window.location.href = "/";
     }
 }
 

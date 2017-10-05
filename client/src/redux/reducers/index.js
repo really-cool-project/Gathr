@@ -22,6 +22,7 @@ const mainReducer = function (state = defaultState, action) {
                 suppers: action.suppers
             }
         case "AUTHENTICATE":
+            console.log(action.isValid);
             return {
                 ...state,
                 isAuthenticated: action.isValid,
@@ -39,6 +40,7 @@ const mainReducer = function (state = defaultState, action) {
                 }
             }
         case "LOGOUT":
+            console.log("logged out");
             return {
                 ...defaultState
             }
