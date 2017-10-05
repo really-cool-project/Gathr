@@ -1,36 +1,54 @@
-
 .gallery-wrapper {
+    margin-top: 7em;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 75%;
-    width: 75%;
-   
+    height: 100%;
+    width: 80%;
 }
 
 .supper-wrapper {
+    margin: 1em;
     display: inline-block;
+    position: relative;
     height: 300px;
     width: 300px;
     background-size: cover;
+    overflow: hidden;
+}
+
+.supper-background {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-size: cover;
+}
+
+.supper-background:hover {
+    filter: grayscale(0%);
+}
+.supper-content:hover + .supper-background{
+opacity: 1;
 }
 
 .supper-content {
     height: 100%;
     width: 100%;
     opacity: 0;
-    transition-property: opacity, background;
-    transition-duration: .7s, .7s;
-  }
+    z-index: 3;
+}
 
 
-.supper-content:hover {
-    background-color: black;
-    opacity: 1;
+.supper-content {
+    z-index: 3;
+    position: absolute;
+}
+
+.supper-content p {
+    font-size: 3em;
     color: white;
 }
 
-.supper-wrapper p {
-    color: white;
-}
