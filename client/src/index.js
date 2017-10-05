@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
+import SupperContainer from "./supper/SupperContainer.js";
 import ApplyContainer from "./apply/ApplyContainer.js";
 import CheckboxContainer from './checkbox/CheckboxContainer.js'
 import ListContainer from "./landing/ListContainer.js";
 import { Link, Switch, Route } from 'react-router-dom';
 import NavbarContainer from './navbar/NavbarContainer.js';
-import ListContainer from "./landing/ListContainer.js";
 import SupperDashboardContainer from './supper-dashboard/SupperDashboardContainer.js';
 import LoginContainer from './login/LoginContainer.js';
 import SignUpContainer from './signup/SignUpContainer.js'
@@ -20,6 +20,7 @@ import './styles/CreatePage.css';
 import './styles/supperdash.css';
 import './styles/login.css';
 import './styles/signup.css';
+import "./styles/supper.css";
 
 class App extends Component {
     constructor() {
@@ -32,7 +33,13 @@ class App extends Component {
         return (
             <div>
                 <NavbarContainer />
-                
+                <Switch>
+                    <Route exact path = "/" component = {ListContainer}></Route>
+                    <Route exact path = "/host" component = {CheckboxContainer}></Route>
+                    <Route path = "/supper" component = {SupperContainer}></Route>
+                    <Route path = "/host/apply" component = {ApplyContainer}></Route>
+                </Switch>
+    
             </div>
         );
     }
