@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router} from 'react-router-dom';
+import thunk from "redux-thunk";
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Link, Switch, Route } from 'react-router-dom';
+
+import mainReducer from "./redux/reducers/index.js";
 
 import SupperContainer from "./supper/SupperContainer.js";
 import ApplyContainer from "./apply/ApplyContainer.js";
@@ -26,13 +31,9 @@ import './styles/login.css';
 import './styles/signup.css';
 import "./styles/supper.css";
 
+let store = createStore(mainReducer, applyMiddleware(thunk));
+
 class App extends Component {
-    constructor() {
-        super();
-        this.state = {
-            supperList: [0,1,2,3,4,5,6,7,8]
-        }
-    }
     render() {
         return (
             <div>
@@ -55,6 +56,9 @@ class App extends Component {
 export default App;
 
 ReactDOM.render( 
-   <Router><App /></Router>,
-    document.getElementById('root')
-)
+   <Provider store={store}>
+       <Router>
+           <App />
+        </Router>
+    </Provider>, 
+    document.getElementById('root'))
