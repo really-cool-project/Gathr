@@ -7,10 +7,9 @@
 }
 
 .supper-wrapper {
-    display: none;
-    width: 30rem;
-    height: 20rem;
-    margin: 1rem 1rem 1rem 1rem;
-    background-image: url("http://blog.elfster.com/wp-content/uploads/2017/04/brooke-lark-200721.jpg");
-    background-size: cover;
+    max-width: 20%;
+    height: auto;
+    float: left;
+    margin: 1em;
+    background-image: url("https://www.modibodi.com/wp-content/uploads/2017/06/One-Pan-Dinner-Unsplash.jpg")
 }

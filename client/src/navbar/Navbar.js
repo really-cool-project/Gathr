@@ -12,8 +12,8 @@ class Navbar extends Component {
                 <Link to="/"><a href="" className = "logo">Logo</a></Link>
                 <ul className = "navbar-link-container">
                     <li className = "host"><Link to = "/host"><a href="">Host a Supper</a></Link></li>
-                    <li className = "sign-up"><a href="">Sign Up</a></li>
-                    <li className = "login"><a href="">Log In</a></li>
+                    <li className = "sign-up"><Link to = "/signup"><a href="">Sign Up</a></Link></li>
+                    <li className = "login"><Link to = "/login"><a href="">Log In</a></Link></li>
                     <li>
                         <a href="">Profile</a>
                         <ul className = "hidden">

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SupperContainer from "./SupperContainer.js";
+import ItemContainer from "./ItemContainer.js";
 
 class ListComponent extends Component {
     // genSuppers() {
@@ -14,7 +14,7 @@ class ListComponent extends Component {
     render() {
         return (
             <div className="gallery-wrapper">
-                <SupperContainer />
+                <ItemContainer />
                 {/* {this.genSuppers()}; */}
             </div>
         );
