@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class SupperDashboard extends Component {
     render() {
+        console.log(this.props)
         return (
             <div className="dashboard-wrapper">
                 <div className = "welcome-line">
                     <p>Welcome Back.</p>
-                    <button className="supper-btn">New Supper</button>
+                    <Link to = "/create"><button className="supper-btn">New Supper</button></Link>
                 </div>
                 <div className="my-supper">
                     <p>Supper Title</p>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom';
+import ProtectedRoute from './ProtectedRoute.js';
 
 import SupperContainer from "./supper/SupperContainer.js";
 import ApplyContainer from "./apply/ApplyContainer.js";
@@ -12,6 +13,8 @@ import SupperDashboardContainer from './supper-dashboard/SupperDashboardContaine
 import LoginContainer from './login/LoginContainer.js';
 import SignUpContainer from './signup/SignUpContainer.js'
 import Thank from "./thank/Thank.js";
+import CreateContainer from './create-page/CreateContainer.js'
+
 
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
@@ -49,12 +52,12 @@ class App extends Component {
                     <Route path = "/signup" component = {SignUpContainer}></Route>
                     <Route path = "/login" component = {LoginContainer}></Route>
                     <Route path = "/supper" component = {SupperContainer}></Route>
-                    <Route path = "/dashboard" component = {SupperDashboardContainer}></Route>
-                    <Route exact path = "/host" component = {CheckboxContainer}></Route>
+                    <ProtectedRoute path = "/dashboard" component = {SupperDashboardContainer} />
+                    <ProtectedRoute exact path = "/host" component = {CheckboxContainer}/>
                     <Route exact path = "/host/apply" component = {ApplyContainer}></Route>
                     <Route path = "/host/apply/thank" component = {Thank}></Route>
+                    <Route path = "/create" component = {CreateContainer} />
                 </Switch>
-    
             </div>
         );
     }
