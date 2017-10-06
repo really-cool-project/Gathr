@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-import Login from './Login.js';
-
+import Create from './Create.js';
 import { connect } from 'react-redux';
-import { login } from '../redux/actions/index.js';
-import { Redirect } from 'react-router-dom'
+import { editSupper }  from '../redux/actions/index.js';
 
-class LoginContainer extends Component {
+class CreateContainer extends Component {
     constructor() {
         super();
         this.state = {
             inputs: {
-                username: "",
-                password: ""
+                title: "",
+                date: "",
+                time: "",
+                price: "",
+                description: "",
+                photo: "",
+                spots: "",
             }
         }
     }
@@ -29,31 +32,35 @@ class LoginContainer extends Component {
     clearInputs = () => {
         this.setState({
             inputs: {
-                username: "",
-                password: ""
+                title: "",
+                date: "",
+                time: "",
+                price: "",
+                description: "",
+                photo: "",
+                spots: "",
             }
         })
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.login(this.state.inputs);
+        this.props.addSupper(this.state.inputs);
         this.clearInputs();
     }
     render() {
-        console.log(this.props.authError)
         return (
-            this.props.isAuthenticated ?
-            <Redirect to="/dashboard" /> :
-            <Login 
-                handleChange = {this.handleChange}
+            <div>
+                <Create
                 handleSubmit = {this.handleSubmit}
-                authError = {this.props.authError.login}/>
+                handleChange = {this.handleChange}
+                 />
+            </div>
         );
     }
 }
 
 const mapStateToProps = (state) => {
-    return state;
+    return state
 }
 
-export default connect (mapStateToProps, { login })(LoginContainer);
+export default connect (mapStateToProps, {editSupper}) (EditContainer);

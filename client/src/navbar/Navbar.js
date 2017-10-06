@@ -5,7 +5,6 @@ import { logout } from "../redux/actions/index.js";
 
 class Navbar extends Component {
     render() {
-        console.log(this.props)
         return (
             <div>
             <div className = "navbar">

@@ -24,7 +24,9 @@ class Login extends Component {
                     <button 
                         className="log-in-btn" 
                         type="submit">Log In</button>
+                        <p>{this.props.authError}</p>
                 </form>
+                
                 <p className = "not-a-member">Not a member? <Link to="/signup"><a href="">Create an account.</a></Link></p>
             </div>
         );

@@ -5,27 +5,18 @@ class Supper extends Component {
         return (
             <div className="supper-page-wrapper">
                 <div className="sup-image-wrapper">
-                    <img className="supper-image" src="https://eb-blog-rally.s3.amazonaws.com/wp-content/uploads/rally/2015/05/rsz_cutting_board_unsplash_022.jpg" alt="" />
+                    <img className="supper-image" src={this.props.photo} alt="" />
                 </div>
                 <div className="supper-info">
                     <div>
-                        <p className="supper-title">Supper Title</p>
-                        <p className="chef-name">chef name</p>
-                        <p className="supper-date">date</p>
-                        <p className="supper-time">time</p>
-                        <p className="supper-price">$100</p>
+                        <p className="supper-title">{this.props.title}</p>
+                        <p className="supper-date">{this.props.date}</p>
+                        <p className="supper-time">{this.props.time}</p>
+                        <p className="supper-price">{this.props.price}</p>
                     </div>
                     <div className="supper-description">
-                        <p className="description">description</p>
-                        <p className="describe-supper">here you will write a short description of your supper club here you will write a short description of your supper club here you will write a short description of your supper club here you will write a short description of your supper club</p>
-                    </div>
-                    <div>
-                        <p className="menu">menu</p>
-                            <p className="menu-items">menu item</p>
-                            <p className="menu-items">menu item</p>
-                            <p className="menu-items">menu item</p>
-                            <p className="menu-items">menu item</p>
-                            <p className="menu-items">menu item</p>
+                        <p className="description">Description:</p>
+                        <p className="describe-supper">{this.props.description}</p>
                     </div>
                     <div>
                         <p className="availability">spots left: 25</p>

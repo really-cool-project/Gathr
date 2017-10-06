@@ -14,17 +14,17 @@ const publicUrl = "http://localhost:8080/public/"
 const supperUrl = "http://localhost:8080/supper/"
 
 
-export function verifyToken () {
+export function verifyToken() {
     return (dispatch) => {
         axios.get(profileUrl + "verify")
             .then((response) => {
                 let user = response.data.user,
-                isValid = response.data.success;
-            dispatch(authenticate(isValid, user))
+                    isValid = response.data.success;
+                dispatch(authenticate(isValid, user))
             })
             .catch((err) => {
                 console.error(err);
-                dispatch(authError({verify: "Invalid token"}))
+                dispatch(authError({ verify: "Invalid token" }))
             })
     }
 }
@@ -38,7 +38,7 @@ export function authenticate(isValid, user) {
     }
 }
 
-export function authError (err) {
+export function authError(err) {
     return {
         type: "AUTH_ERROR",
         err
@@ -75,16 +75,16 @@ export function login(credentials) {
             })
             .catch((err) => {
                 console.error(err);
-                dispatch(authError({ login: "Invalid username or password"}))
+                dispatch(authError({ login: "Invalid username or password" }))
             })
     }
 }
 
 export function logout() {
-    return(dispatch)=>{
+    return (dispatch) => {
         console.log("logged out");
         localStorage.removeItem("token");
-        dispatch({type: "LOGOUT"});
+        dispatch({ type: "LOGOUT" });
         window.location.href = "/";
     }
 }
@@ -115,16 +115,16 @@ export function loadPublicSuppers() {
 export function loadUserSuppers() {
     return (dispatch) => {
         axios.get(supperUrl)
-        .then((response) => {
-            dispatch(setData(response.data));
-        })
-        .catch((err) => {
-            console.error(err)
-        })
+            .then((response) => {
+                dispatch(setData(response.data));
+            })
+            .catch((err) => {
+                console.error(err)
+            })
     }
 }
 
-function setCurrentSupper (supper) {
+function setCurrentSupper(supper) {
     return {
         type: "SET_CURRENT_SUPPER",
         supper
@@ -133,13 +133,22 @@ function setCurrentSupper (supper) {
 
 export function loadSupperById(id) {
     return (dispatch) => {
-        axios.get(supperUrl+id)
-        .then((response) => {
-            dispatch(setCurrentSupper(response.data));
-        })
-        .catch((err) => {
-            console.error(err)
-        })
+        axios.get(supperUrl + id)
+            .then((response) => {
+                dispatch(setCurrentSupper(response.data));
+            })
+            .catch((err) => {
+                console.error(err)
+            })
+    }
+}
+
+export function editSupperById(id, editedSupper) {
+    return (dispatch) => {
+        axios.put(supperUrl + id)
+            .then((response) => {
+                dispatch()
+            })
     }
 }
 

@@ -9,11 +9,12 @@ class SupperContainer extends Component {
         this.props.loadSupperById(this.props.match.params.id);
     }
     render() {
-        console.log(this.props.match.params.id)
         return (
-            <Supper />
+            <Supper {...this.props.currentSupper}/>
         );
     }
 }
 
-export default connect (null, {loadSupperById}) (SupperContainer);
+
+
+export default connect (state => state, {loadSupperById}) (SupperContainer);
