@@ -9,21 +9,21 @@ class Navbar extends Component {
         return (
             <div>
             <div className = "navbar">
-                <Link to="/"><a href="" className = "logo">Logo</a></Link>
+                <Link to="/"><span className = "logo">Logo</span></Link>
                 <ul className = "navbar-link-container">
-                    <li className = "host"><Link to = "/host"><a href="">Host a Supper</a></Link></li>
+                    <li className = "host"><Link to = "/host">Host a Supper</Link></li>
                     {this.props.isAuthenticated ? 
                         null :
-                        <li className = "sign-up"><Link to = "/signup"><a href="">Sign Up</a></Link></li>}
+                        <li className = "sign-up"><Link to = "/signup">Sign Up</Link></li>}
                     {this.props.isAuthenticated ? 
                         null :
-                        <Link to = "/login"><li className = "login"><a href="">Log In</a></li></Link>}
+                        <Link to = "/login"><li className = "login">Log In</li></Link>}
                     {!this.props.isAuthenticated ? 
                         null :
                         <li>
-                            <Link to="/dashboard"><a href="">Profile</a></Link>
+                            <Link to="/dashboard">Profile</Link>
                             <ul className = "hidden">
-                                <li><Link to="/dashboard"><a className = "hidden-li" href="">Profile</a></Link></li>
+                                <li><Link to="/dashboard"><span className = "hidden-li" >Profile</span></Link></li>
                                 <li><a className = "hidden-li" href="">Hearted Suppers</a></li>
                                 <li><a className = "hidden-li" href="">RSVPs</a></li>
                                 <li><button onClick={this.props.logout}><a className = "hidden-li" href="#">Logout</a></button></li>

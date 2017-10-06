@@ -11,16 +11,28 @@ p {
 
 .supper-title {
     font-size: 3em;
-    margin: 0;
+    line-height: 1;
+    margin: 0 !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
 }
 
-.supper-date, .supper-price, .supper-spots {
-    margin: 0;
+
+.supper-description {
+    font-size: 15px !important;
+}
+.supper-date, .supper-price, {
+    margin: 0 !important;
+    line-height: 1;
 }
 
+.link-to-supper {
+    text-decoration: none !important;
+}
 img {
     width: 100%;
 }
+
 
 .masonry {
     width: 80%;

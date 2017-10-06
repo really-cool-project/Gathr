@@ -11,7 +11,7 @@ axios.interceptors.request.use((config) => {
 const authUrl = "http://localhost:8080/auth/";
 const profileUrl = "http://localhost:8080/profile/"
 const publicUrl = "http://localhost:8080/public/"
-const supperUrl = "http://localhost:8080/supper"
+const supperUrl = "http://localhost:8080/supper/"
 
 
 export function verifyToken () {
@@ -123,6 +123,26 @@ export function loadUserSuppers() {
         })
     }
 }
+
+function setCurrentSupper (supper) {
+    return {
+        type: "SET_CURRENT_SUPPER",
+        supper
+    }
+}
+
+export function loadSupperById(id) {
+    return (dispatch) => {
+        axios.get(supperUrl+id)
+        .then((response) => {
+            dispatch(setCurrentSupper(response.data));
+        })
+        .catch((err) => {
+            console.error(err)
+        })
+    }
+}
+
 
 export function addSupper(supper) {
     return (dispatch) => {

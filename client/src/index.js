@@ -57,7 +57,7 @@ class App extends Component {
                     <Route exact path = "/" component = {ListContainer}></Route>
                     <Route path = "/signup" component = {SignUpContainer}></Route>
                     <Route path = "/login" component = {LoginContainer}></Route>
-                    <Route path = "/supper" component = {SupperContainer}></Route>
+                    <Route path = "/supper/:id" component = {SupperContainer}></Route>
                     <ProtectedRoute path = "/dashboard" component = {SupperDashboardContainer} />
                     <ProtectedRoute exact path = "/host" component = {CheckboxContainer}/>
                     <Route exact path = "/host/apply" component = {ApplyContainer}></Route>

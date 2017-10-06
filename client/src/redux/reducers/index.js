@@ -11,7 +11,8 @@ let defaultState = {
         login: "",
         verify: ""
     },
-    suppers: []
+    suppers: [],
+    currentSupper: {}
 };
 
 const mainReducer = function (state = defaultState, action) {
@@ -30,6 +31,11 @@ const mainReducer = function (state = defaultState, action) {
                 authError: {
                     ...defaultState.authError
                 }
+            }
+        case "SET_CURRENT_SUPPER":
+            return {
+                ...state,
+                currentSupper: action.supper
             }
         case "AUTH_ERROR":
             return {
