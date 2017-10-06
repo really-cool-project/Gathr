@@ -11,6 +11,7 @@ axios.interceptors.request.use((config) => {
 const authUrl = "http://localhost:8080/auth/";
 const profileUrl = "http://localhost:8080/profile/"
 const publicUrl = "http://localhost:8080/public/"
+const supperUrl = "http://localhost:8080/supper"
 
 
 export function verifyToken () {
@@ -89,7 +90,7 @@ export function logout() {
 }
 
 //DATA
-const dataUrl = "http://localhost:8080/supper";
+
 
 const setData = function (suppers) {
     return {
@@ -100,7 +101,7 @@ const setData = function (suppers) {
 
 export function loadPublicSuppers() {
     return (dispatch) => {
-        axios.get(publicUrl)
+        axios.get(publicUrl + "suppers")
             .then((response) => {
                 dispatch(setData(response.data));
             })
@@ -111,15 +112,26 @@ export function loadPublicSuppers() {
 }
 
 
+export function loadUserSuppers() {
+    return (dispatch) => {
+        axios.get(supperUrl)
+        .then((response) => {
+            dispatch(setData(response.data));
+        })
+        .catch((err) => {
+            console.error(err)
+        })
+    }
+}
 
-// export function addSupper(supper) {
-//     return (dispatch) => {
-//         axios.post(dataUrl, supper)
-//             .then((response) => {
-//                 dispatch(loadSuppers());
-//             })
-//             .catch((err) => {
-//                 console.error(err);
-//             })
-//     }
-// }
+export function addSupper(supper) {
+    return (dispatch) => {
+        axios.post(supperUrl, supper)
+            .then((response) => {
+                dispatch(loadUserSuppers());
+            })
+            .catch((err) => {
+                console.error(err);
+            })
+    }
+}

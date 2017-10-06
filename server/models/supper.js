@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 const supperSchema = new Schema({
     title: String,
-    name: String,
     date: String,
     time: String,
     price: String,
