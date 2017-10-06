@@ -19,7 +19,7 @@ class Supper extends Component {
                         <p className="describe-supper">{this.props.description}</p>
                     </div>
                     <div>
-                        <p className="availability">spots left: 25</p>
+                        <p className="availability">{this.props.spots}</p>
                         <button className="rsvp">RSVP</button>
                     </div>
                 </div>
