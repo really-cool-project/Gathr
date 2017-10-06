@@ -10,7 +10,7 @@ class Supper extends Component {
                 <div className="supper-info">
                     <div>
                         <p className="supper-title">{this.props.title}</p>
-                        <p className="chef-name">{this.props}</p>
+                        <p className="chef-name"></p>
                         <p className="supper-date">{this.props.date}</p>
                         <p className="supper-time">{this.props.time}</p>
                         <p className="supper-price">{this.props.price}</p>
