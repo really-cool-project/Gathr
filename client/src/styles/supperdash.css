@@ -7,6 +7,24 @@ body {
     margin: 0;
 }
 
+.edit-my-supper {
+    float: left;
+    margin-top: 10px !important;
+}
+
+.welcome-line {
+    margin-top: 14px !important;
+    margin-left: 14px !important;
+    width: 370px !important;
+}
+.dash-title {
+    font-size: 25px !important;
+    margin: 0 !important;
+}
+.dash-date, .dash-time, .dash-price, .dash-spots {
+    font-size: 14px !important;
+    margin: 0;
+}
 p {
     font-family: 'Raleway', sans-serif;
     margin: .2em;

@@ -6,7 +6,7 @@ import ListContainer from "./ListContainer.js";
 class SupperDashboard extends Component {
     render() {
         return (
-            <div>
+            <div className = "masonry">
                 <div className="welcome-line">
                     <p className="welcome">Welcome Back, {this.props.user.username}.</p>
                     <Link to="/create"><button className="supper-btn">New Supper</button></Link>
