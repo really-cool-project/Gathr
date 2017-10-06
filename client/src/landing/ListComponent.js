@@ -13,7 +13,7 @@ class ListComponent extends Component {
     render() {
         return (
             <div className = "gallery-wrapper">
-               {this.genSuppers()};
+               {this.genSuppers()}
             </div>
         );
     }
