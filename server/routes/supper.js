@@ -33,7 +33,7 @@ supperRoute.route("/")
     });
 supperRoute.route("/:id")
     .get((req, res) => {
-        supperModel.findById(req.params.id, (err, supper) => {
+        SupperModel.findById(req.params.id, (err, supper) => {
             if (err) {
                 res.status(500).send(err);
             } else {

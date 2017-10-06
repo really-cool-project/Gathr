@@ -26,6 +26,7 @@ authRoute.use(passport.initialize());
 
 authRoute.route("/signup")
     .post((req, res) => {
+        console.log(req.body);
         UserModel.findOne({ username: req.body.username }, (err, user) => {
             if (err) {
                 res.status(500).send({
