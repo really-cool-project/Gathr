@@ -6,7 +6,7 @@ const config = require("../config");
 const publicRoute = express.Router();
 
 
-publicRoute.route("/")
+publicRoute.route("/suppers")
     .get((req, res) => {
         SupperModel.find((err, suppers) => {
             if (err) {

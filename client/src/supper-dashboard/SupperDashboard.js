@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 class SupperDashboard extends Component {
     render() {
-        console.log(this.props)
         return (
             <div className="dashboard-wrapper">
                 <div className = "welcome-line">
-                    <p>Welcome Back.</p>
+                    <p>Welcome Back, {this.props.user.username}.</p>
                     <Link to = "/create"><button className="supper-btn">New Supper</button></Link>
                 </div>
                 <div className="my-supper">
@@ -21,5 +21,8 @@ class SupperDashboard extends Component {
         );
     }
 }
+const mapStateToProps = (state) => {
+    return state
+}
 
-export default SupperDashboard;
+export default connect (mapStateToProps, null) (SupperDashboard);
