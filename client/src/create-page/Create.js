@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Create extends Component {
     render() {
@@ -29,8 +30,9 @@ class Create extends Component {
                     <div className="create-img-container">
                         <input onChange = {this.props.handleChange} className="img-text-box" type="text" placeholder="Image" name="photo"/>
                     </div>
-                    <button className="submit-btn" onClick = {this.props.handleSubmit}>Submit</button>
-
+                    <Link to= "/dashboard" onClick = {this.props.handleSubmit}>
+                    <button className="submit-btn" >Submit</button>
+                    </Link>
                 </div>
             </div>
         );

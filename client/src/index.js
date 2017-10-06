@@ -20,6 +20,12 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import mainReducer from './redux/reducers/index.js';
+
+import { verifyToken } from './redux/actions/index.js';
+import {connect} from "react-redux";
+
+import { withRouter } from "react-router-dom";
+
 import "./styles/thank.css";
 import './styles/modal.css';
 import "./styles/landing.css";
@@ -36,12 +42,12 @@ import "./styles/supper.css";
 let store = createStore(mainReducer, applyMiddleware(thunk))
 
 
+
+
+
 class App extends Component {
-    constructor() {
-        super();
-        this.state = {
-            supperList: [0,1,2,3,4,5,6,7,8]
-        }
+    componentDidMount() {
+        this.props.verifyToken();
     }
     render() {
         return (
@@ -67,7 +73,7 @@ store.subscribe(() => {
     console.log(store.getState());
 })
 
-export default App;
+App = withRouter(connect (null, {verifyToken})(App));
 
 ReactDOM.render( 
    <Provider store = {store}><Router><App /></Router></Provider>,
